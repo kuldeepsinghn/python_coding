@@ -1,8 +1,8 @@
-from average_age_of_dict_ages import average_num
-from length_of_dict_ages import length_ages
-from length_of_dict_student import total_students_length
-from function_to_find_exact_value import function
-from Find_exact_name_based_on_address import function_2
+from question_2 import average_num
+from question_1 import length_ages
+from question_5 import total_students_length
+from question_7 import function_2
+from question_4 import function
 
 students = {
     "Peter": {"age": 10, "address": "Lisbon"},
