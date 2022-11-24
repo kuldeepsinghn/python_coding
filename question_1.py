@@ -15,7 +15,7 @@ def length_ages(input_dictionary):
 
 
 
-ages = {
+age = {
     "Peter": 10,
     "Isabel": 11,
     "Anna": 9,
@@ -26,6 +26,6 @@ ages = {
     "Gabriel": 10,
 }
 """Here I called function and assign the value of function in a variable"""
-length_of_dictionary = length_ages(input_dictionary= ages)
+length_of_dictionary = length_ages(input_dictionary= age)
 """here I am calling the variable in which function was assigned"""
 print(length_of_dictionary)
