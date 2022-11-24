@@ -1,4 +1,4 @@
-""" question - Implement a function that receives the students dict and returns the average age."""
+""" question - Implement a function that receives the ages dict and returns the average age."""
 
 """here I am creating a new function and its name is average_num and in function  i passed an input_dictionary
 as parameter """
