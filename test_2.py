@@ -14,25 +14,44 @@ students = [
 ]
 
 
+# def sort_grades(input_list):
+#     sort_grade_list = []
+#     for students_data in input_list:
+#         sort_grade_dict = {}
+#         # print(i)
+#         total = 0
+#         for i in students_data['grades']:
+#             total += i
+#
+#         avg = total / len(students_data['grades'])
+#         # sort_grade_dict[students_data['name']] = [avg]
+#         sort_grade_dict[students_data['name']] = students_data['grades']
+#         # sort_grade_dict_1 = sorted(sort_grade_dict.items(), key=lambda x:x[1], reverse=True)
+#         # converted_dict = dict(sort_grade_dict_1)
+#         sort_grade_list.append(sort_grade_dict)
+#
+#     return sort_grade_list
+#
+#
+# x = sort_grades(input_list=students)
+# print(x)
+# # print(y)
+
+
+
+
 def sort_grades(input_list):
-    sort_grade_list = []
-    for students_data in input_list:
-        sort_grade_dict = {}
-        # print(i)
-        total = 0
-        for i in students_data['grades']:
-            total += i
-
-        avg = total / len(students_data['grades'])
-        # sort_grade_dict[students_data['name']] = [avg]
-        sort_grade_dict[students_data['name']] = students_data['grades']
-        # sort_grade_dict_1 = sorted(sort_grade_dict.items(), key=lambda x:x[1], reverse=True)
-        # converted_dict = dict(sort_grade_dict_1)
-        sort_grade_list.append(sort_grade_dict)
-
-    return sort_grade_list
+    ret_list = []
+    for student in input_list:
+        sum = 0
+        for grade in student['grades']:
+            sum += grade
+        avg = sum / len(student['grades'])
+        student['avg'] = avg
+        ret_list.append(student)
+    ret_list = sorted(ret_list,key=lambda student:(- student['avg'],student['name']),reverse=False)
+    return ret_list
 
 
 x = sort_grades(input_list=students)
 print(x)
-# print(y)
