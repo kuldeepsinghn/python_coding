@@ -10,8 +10,10 @@
 #     return age
 # print(calculate_age(2022, 2003))
 
-def add_ten(num):
-    ten = 10
-    return num + ten
-print(add_ten(90))
+
+
+# def add_ten(num):
+#     ten = 10
+#     return num + ten
+# print(add_ten(90))
 

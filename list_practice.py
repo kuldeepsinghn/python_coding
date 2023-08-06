@@ -118,3 +118,30 @@ back_end = ['Node', 'Express', 'MongoDB']
 print(back_end)
 front_end.extend(back_end)
 print("front_end and back_end", front_end)
+
+ages = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24]
+print(ages)
+# sort the list and find min and max age
+
+ages.sort()
+print(ages)
+
+print(max(ages))
+
+print(min(ages))
+
+ages.insert(0, 10)
+ages.insert(-1, 30)
+ages.sort()
+print(ages)
+
+# average of ages in list
+
+x=sum(ages)
+print("sum of ages", x)
+
+y=len(ages)
+print("length of ages", y)
+
+print(sum(ages) / len(ages))
+
