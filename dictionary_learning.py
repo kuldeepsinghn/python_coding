@@ -102,3 +102,73 @@ keys = ["name", "salary"]
 for k in keys:
     sample_dict.pop(k)
 print(sample_dict)
+
+
+
+# iterate over dictionaries using for loops.
+d = {'x': 10, 'y': 20, 'z': 30}
+for dict_key, dict_value in d.items():
+    print(dict_key, '->', dict_value)
+
+# merge two dict
+d1 = {'a': 100, 'b': 200}
+d2 = {'x': 300, 'y': 200}
+d = d1.copy()
+d.update(d2)
+print(d)
+
+# multiply items of dict
+my_dict = {'data1':100,'data2':-54,'data3':247}
+result=1
+for key in my_dict:
+    result=result * my_dict[key]
+
+print(result)
+
+
+# remove item from dict
+myDict = {'a':1,'b':2,'c':3,'d':4}
+print(myDict)
+if 'a' in myDict:
+    del myDict['a']
+print(myDict)
+
+
+
+# map two list into dict
+keys = ['red', 'green', 'blue']
+values = ['#FF0000','#008000', '#0000FF']
+color_dictionary = dict(zip(keys, values))
+print(color_dictionary)
+
+
+# Write a Python program to remove duplicates from the dictionary.
+student_data = {'id1':
+   {'name': ['Sara'],
+    'class': ['V'],
+    'subject_integration': ['english, math, science']
+   },
+ 'id2':
+  {'name': ['David'],
+    'class': ['V'],
+    'subject_integration': ['english, math, science']
+   },
+ 'id3':
+    {'name': ['Sara'],
+    'class': ['V'],
+    'subject_integration': ['english, math, science']
+   },
+ 'id4':
+   {'name': ['Surya'],
+    'class': ['V'],
+    'subject_integration': ['english, math, science']
+   },
+}
+
+result = {}
+
+for key,value in student_data.items():
+    if value not in result.values():
+        result[key] = value
+
+print(result)
