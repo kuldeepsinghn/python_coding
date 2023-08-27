@@ -6,7 +6,7 @@ username = 'kuldeepsinghn'
 repo_name='python_coding'
 
 # your GitHub Personal Access Token
-access_token = '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'
+access_token = 'xxx'
 
 # The URL of the GitHub API endpoint for the specific user
 url = f'https://api.github.com/users/{username}/repos'
