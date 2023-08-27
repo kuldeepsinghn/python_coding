@@ -3,7 +3,7 @@ import datetime
 
 
 def get_repos(username):
-    access_token = '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'
+    access_token = 'xxx'
     url = f'https://api.github.com/users/{username}/repos'
     headers = {
         'Authorization': f'Token {access_token}'
@@ -19,7 +19,7 @@ def get_repos(username):
 
 
 def get_repo_commits(username, repo_name):
-    access_token = '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'
+    access_token = 'xxx'
     url = f'https://api.github.com/repos/{username}/{repo_name}/commits'
     headers = {
         'Authorization': f'Token {access_token}'
@@ -60,5 +60,5 @@ file.write(str(get_repo_commits(username='kuldeepsinghn', repo_name='python_codi
 file.close()
 access_commits = get_repo_commits(username='kuldeepsinghn', repo_name='python-')
 print(access_commits)
- 
+
 print(get_repos(username='kuldeepsinghn'))
