@@ -3,7 +3,7 @@ import requests
 def python_coding():
     username = 'kuldeepsinghn'
     repo_name = 'python_coding'
-    access_token = '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'
+    access_token = 'xxx'
     url = f'https://api.github.com/repos/{username}/{repo_name}/commits'
     headers = {
         'Authorization': f'Token {access_token}'
