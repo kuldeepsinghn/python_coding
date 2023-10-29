@@ -32,11 +32,11 @@ print(type(var))
 exp = 15 / 3 * 2 * 2 - (3 + 4)
 print(exp)
 
-"""In a .py file, writetal  a program which calculates the subtotal of all 6 of these items using 
-an expression.  The subtois just the sum of all of their prices"""
+"""In a .py file, write a program which calculates the subtotal of all 6 of these items using 
+an expression.  The subtotal is just the sum of all of their prices"""
 
 penne = 16.68 * 100
-pasta_sauce = 698 * 100
+pasta_sauce = 6.98 * 100
 garlic = 16.78 * 100
 italian = 15.26 * 100
 Bag = 3.00 * 100
@@ -49,7 +49,6 @@ ex_1 = 'This is a string'
 ex_2 = "This is also a string"
 
 ex_3 = "orange"
-
 print(ex_3[2])
 print("apple"[4])
 
@@ -193,105 +192,3 @@ hello_world_printer()
 #                 print("students is failed sorry :( " ,marks)
 #
 #
-
-# loop practice question on while loop
-
-# number= 10
-# while number != 0:
-#     print(number)
-#     number -= 1
-#
-# positive_integer= int(input("Enter any positive number"))
-# total = 0
-# while positive_integer > 0:
-#     print(positive_integer)
-#     total+= positive_integer
-#     positive_integer-=1
-#
-# print(total)
-#
-# word = "hello world"
-#
-# for letter in word:
-#     print(letter)
-#
-#
-# words=input("Enter a string")
-# count =0
-# for letter in words:
-#     count+=1
-#
-# print(words)
-# print(count)
-
-
-# for num in range(1,51):
-#     if(num%3==0 and num % 5 ==0):
-#         print("fizzbuzz")
-#     elif (num%3==0):
-#         print("fizz")
-#     elif(num%5==0):
-#         print("buzz")
-#     else:
-#         print(num)
-#
-
-# Q Create a variable called mixed_case and assign it the string "A Song of Ice and Fire"
-mixed_case = "A Song of Ice and Fire"
-# Q Use .isupper() to check if mixed_case is a string of all upper case letters.  print() the result.
-print(mixed_case.isupper())
-# Q Use .islower() to check if mixed_case is a string of all lower case letters.  print() the result.
-print(mixed_case.islower())
-# Q Change all the letters in mixed_case to upper case letters using .upper() and print() the result.
-print(mixed_case.upper())
-# Q Change all the letters in mixed_case to lower case letters using .lower() and print() the result.
-print(mixed_case.lower())
-# Q Use the .istitle() method to check if mixed_case is title case and print the result.
-print(mixed_case.istitle())
-# Q Create a variable called title_case and assign it the result of .title() being called on mixed_case
-title_case = (mixed_case.title())
-# Q print() title_case
-print(title_case)
-
-print(mixed_case.startswith("A"))
-print(mixed_case.endswith("e"))
-words = mixed_case.split()
-print(words)
-print("".join(words).isalpha())
-
-# string methods 2 exercises
-# Q Create a variable called the_string and assign it the string "North Dakota".
-
-the_string = "North Dakota"
-
-# Q Call .rjust() on the_string with 17 as its argument and print() the result.
-print(the_string.rjust(17))
-
-# Q Call .ljust() on the_string with the arguments 17 and "*" then print() the result.
-print(the_string.ljust(17, "*"))
-
-# Q. Create a variable called center_plus and assign it the result of .center() being called on the_string with 16 and "+" as arguments.
-center_plus = the_string.center(16, "+")
-
-# Q Use print() to display the string assigned to center_plus.
-print(center_plus)
-
-#  Q Call .lstrip() on the_string to remove "North" then print() the result.
-print(the_string.lstrip("North"))
-
-# Q Call .rstrip() on center_plus with "+" as its argument and print() the result
-print(center_plus.rstrip("+"))
-
-# Call .strip() on center_plus with "+" as its argument and print() the result.
-print(center_plus.strip("+"))
-
-# Call .replace() on the_string and replace "North" with "South".  print() the result.
-print(the_string.replace("North", "South"))
-
-string = input("Please enter a string.")
-rev = ""
-
-for i in range(len(string) - 1, -1, -1):
-    rev += string[i]
-
-print(rev)

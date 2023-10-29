@@ -1,4 +1,4 @@
-"""you are given a list of integers. Write a function
+"""ou are given a list of integers. Write a function
 that takes this list as input and returns the sum of all even numbers in the list multiplied by
  the largest odd number in the list. If there are no even numbers in the list, the function should return 0.
 
@@ -62,64 +62,11 @@ def sum_elements(numbers):
 
 print(sum_elements([8, 2, 3, 0, 7]))
 
-
 def different_list(l):
-    x = []
-    for a in l:
-        if a not in x:
-            x.append(a)
-    return x
+  x = []
+  for a in l:
+    if a not in x:
+      x.append(a)
+  return x
 
-
-print(different_list([1, 2, 3, 3, 3, 3, 4, 5]))
-
-
-def prime_number(n):
-    if (n == 1):
-        return False
-    elif (n == 2):
-        return True;
-    else:
-        for x in range(2, n):
-            if (n % x == 0):
-                return False
-        return True
-
-
-print(prime_number(9))
-
-
-def concatenate_list_data(list_1):
-    result = ''
-    for element in list_1:
-        result += str(element)
-    return result
-
-
-print(concatenate_list_data([1, 5, 12, 2]))
-
-
-def my_func(x):
-    return list(set(x))
-
-
-result = my_func([11, 12, 13, 11, 15, 18, 18, 22, 20, 16, 12])
-print(result)
-
-
-def my_func(x, y):
-    return x[y]
-
-
-result = my_func(list(range(2, 25, 2)), 4)
-print(result)
-
-
-var = 10
-
-def my_func(x):
-    var = 5
-    print(x * var)
-
-
-my_func(20)
+print(different_list([1,2,3,3,3,3,4,5]))

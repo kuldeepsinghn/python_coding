@@ -40,5 +40,3 @@ ages = {
 average_of_dictionary = average_num(input_dictionary=ages)
 """here I am calling the variable in which function was assigned"""
 print(average_of_dictionary)
-
-

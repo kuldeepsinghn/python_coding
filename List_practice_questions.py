@@ -63,7 +63,7 @@ Given the code below, use the correct method on line 3 in order to concatenate m
 # program
 my_list = [10, 10.5, 20, 30, 'Python', 'Java', 'Ruby']
 
-my_list.extend([100, 101, 102])
+my_list.extend([100,101,102])
 
 print(my_list)
 
@@ -93,7 +93,7 @@ Given the code below, use the correct function (and argument) on line 3 in order
 # program
 my_list = [10, 10.5, 20, 30, 25.6, 19.25, 11.01, 29.99]
 
-asc = sorted(my_list, reverse=True)
+asc = sorted(my_list, reverse= True)
 
 print(asc)
 
@@ -125,6 +125,7 @@ add = sum(my_list)
 
 print(add)
 
+
 # Exercise 49 - Lists
 # Given the code below, use the correct method on line 3 in order to delete all the elements from my_list and obtain
 # an empty list.
@@ -141,7 +142,7 @@ print(my_list)
 
 my_list = [10, 10.5, 20, 30, 25.6, 19.25, 11.01, 29.99]
 
-add = (my_list + [30.01, 30.02, 30.03]) * 2
+add = (my_list + [30.01, 30.02, 30.03])*2
 
 print(add)
 
@@ -193,7 +194,7 @@ my_list = [10, 10.5, 20, 30, 'Python', 'Java', 'Ruby']
 
 my_slice = my_list[3:]
 
-print(my_slice)  # [30, 'Python', 'Java', 'Ruby']
+print(my_slice) #[30, 'Python', 'Java', 'Ruby']
 
 """Exercise 56 - Lists
 Given the code below, use the correct code on line 3 in order to return my_list except the last 4 elements, 
@@ -203,7 +204,7 @@ my_list = [10, 10.5, 20, 30, 'Python', 'Java', 'Ruby']
 
 my_slice = my_list[:3]
 
-print(my_slice)  # [10, 10.5, 20]
+print(my_slice) #[10, 10.5, 20]
 
 """Exercise 57 - Lists
 Given the code below, use the correct code on line 3 in order to return my_list except the first 3 elements, using a single, negative index.
@@ -213,7 +214,7 @@ my_list = [10, 10.5, 20, 30, 'Python', 'Java', 'Ruby']
 
 my_slice = my_list[-4:]
 
-print(my_slice)  # [30, 'Python', 'Java', 'Ruby']
+print(my_slice) #[30, 'Python', 'Java', 'Ruby']
 
 """Exercise 58 - Lists
 Given the code below, use the correct code on line 3 in order to return my_list except the last 2 elements,
@@ -223,7 +224,7 @@ my_list = [10, 10.5, 20, 30, 'Python', 'Java', 'Ruby']
 
 my_slice = my_list[:5]
 
-print(my_slice)  # [10, 10.5, 20, 30, 'Python']
+print(my_slice) #[10, 10.5, 20, 30, 'Python']
 
 """Exercise 59 - Lists
 Given the code below, use the correct code on line 3 in order to return every third element of my_list starting with 
@@ -233,7 +234,7 @@ my_list = [10, 10.5, 20, 30, 'Python', 'Java', 'Ruby']
 
 my_slice = my_list[::3]
 
-print(my_slice)  # [10, 30, 'Ruby']
+print(my_slice) #[10, 30, 'Ruby']
 
 """Exercise 60 - Lists
 Given the code below, use the correct code on line 3 in order to return every fourth element of my_list starting with 
@@ -243,24 +244,5 @@ my_list = [10, 10.5, 20, 30, 'Python', 'Java', 'Ruby']
 
 my_slice = my_list[::-4]
 
-print(my_slice)  # ['Ruby', 20]
+print(my_slice) #['Ruby', 20]
 
-
-my_list = [10, 10.5, 20, 30, 'Python', 'Java', 'Ruby']
-
-my_slice = my_list[-4:-1]
-
-print(my_slice)
-
-#  Display numbers from a list using loop
-
-numbers = [12, 75, 150, 180, 145, 525, 50]
-# iterate each item of a list
-for item in numbers:
-    if item > 500:
-        break
-    elif item > 150:
-        continue
-    # check if number is divisible by 5
-    elif item % 5 == 0:
-        print(item)
