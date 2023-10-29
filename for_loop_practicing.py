@@ -108,7 +108,7 @@ for i in range(10, 0, -1):
 
 
 def missing_number():
-    list = [1, 2, 3, 4, 5, 6, 7, 9, 10]
+    list = [1, 2, 3, 4, 5, 6, 7, 10]
     n = 10
     total = 0
     sum = 0
@@ -119,10 +119,11 @@ def missing_number():
     print("total_sum_of_list", total)
 
     missing_num = sum - total
-    print("missed_num in list ", missing_num)
+    return missing_num
 
 
-missing_number()
+result = missing_number()
+print(result)
 
 number = (int(input("Enter a number")))
 for i in range(11):
@@ -175,7 +176,6 @@ def unique_list(lis):
     for i in lis:
         if i not in x:
             x.append(i)
-    return ("the new unique list is =", x)
-
+    return x
 
 print(unique_list(lis=[1, 2, 3, 3, 3, 3, 4, 6, 6, 5]))

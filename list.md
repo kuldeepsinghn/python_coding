@@ -268,4 +268,7 @@ print(thislist)
 ### reverse()	Reverses the order of the list
 ### sort()	Sorts the list
 
+#### list practicing
 
+- Given the code below, use the correct code on line 3 in order to return every fourth element of my_list starting with 
+the last element of the list."""

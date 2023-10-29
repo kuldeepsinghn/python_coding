@@ -62,21 +62,21 @@ def result():
     tot = markOne + markTwo + markThree + markFour + markFive
     avg = tot / 5
 
-    if avg >= 91 and avg <= 100:
+    if 91 <= avg <= 100:
         print("Your Grade is A1")
-    elif avg >= 81 and avg < 91:
+    elif 81 <= avg < 91:
         print("Your Grade is A2")
-    elif avg >= 71 and avg < 81:
+    elif 71 <= avg < 81:
         print("Your Grade is B1")
-    elif avg >= 61 and avg < 71:
+    elif 61 <= avg < 71:
         print("Your Grade is B2")
-    elif avg >= 51 and avg < 61:
+    elif 51 <= avg < 61:
         print("Your Grade is C1")
-    elif avg >= 41 and avg < 51:
+    elif 41 <= avg < 51:
         print("Your Grade is C2")
-    elif avg >= 33 and avg < 41:
+    elif 33 <= avg < 41:
         print("Your Grade is D")
-    elif avg >= 21 and avg < 33:
+    elif  21 <= avg < 33:
         print("Your Grade is E1")
     elif avg >= 0 and avg < 21:
         print("Your Grade is E2")
@@ -109,8 +109,6 @@ for x in numbers:
 print("Number of even numbers :", count_even)
 print("Number of odd numbers :", count_odd)
 
-
-
 print(
     "List of months: January, February, March, April, May, June, July, August, September, October, November, December")
 month_name = input("Input the name of Month: ")
@@ -123,8 +121,6 @@ elif month_name in ("January", "March", "May", "July", "August", "October", "Dec
     print("No. of days: 31 day")
 else:
     print("Wrong month name")
-
-
 
 year = int(input("Input a year: "))
 
@@ -148,7 +144,6 @@ elif month == 2:
         month_length = 28
 else:
     month_length = 30
-
 
 day = int(input("Input a day [1-31]: "))
 

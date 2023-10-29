@@ -29,11 +29,13 @@
 
 def average_students(students):
     total = 0
-    for i in students.keys():
+    for i, j in students.items():
         total += students[i]['age']
 
     average = total / len(students.keys())
     return average
+
+
 
 
 students = {

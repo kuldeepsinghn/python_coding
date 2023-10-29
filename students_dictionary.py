@@ -1,3 +1,7 @@
+def test(flat_dict):
+    return list(flat_dict.keys())
+
+
 students = {
     "Peter": 10,
     "Isabel": 11,
@@ -8,5 +12,12 @@ students = {
     "Maria": 12,
     "Gabriel": 10,
 }
-print("students:", students)
-print("Length of students in dictionary is :", len(students))
+students.update({"ritu": 17})
+print("students:", test(students))
+
+keys = ["kuldeep", "ritu", "bitu", "rohit"]
+values = [19, 17, 21, 18]
+Name_error = dict(zip(keys, values))
+print(Name_error)
+Name_error["lucky"] = 15
+print(Name_error)

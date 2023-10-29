@@ -5,13 +5,13 @@
 # """ here I am creating a new function and its name is function_2 and in function I passed two arguments
 # one argument is dictionary and other one is a variable is created by me
 # """
-#
-#
+
+
 # def function_2(students, x):
 #     """Now I create a new dictionary in function to store name and address according to question"""
 #     new_dict = {}
 #     """ Now i am using for loop in this function to get key and value of dictionary here p is used for
-#     'key' and q is used for ' value' """
+#     'key' and q is used for 'value' """
 #     for p, q in students.items():
 #         # print(x, y)
 #         """Now i again used for loop in this function because in this dictionary we have dictionaries in
@@ -55,4 +55,4 @@ students = {
     "Anna": {"age": 9, "address": "Lisbon"},
 }
 
-print(function_2(students, x='Lisbon'))
+print(function_2(students, x='Sesimbra'))
