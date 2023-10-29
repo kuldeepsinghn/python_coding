@@ -1,58 +1,56 @@
-import json
 import psycopg2
+import json
 
-# Database connection parameters
-db_params = {
-    "host": "your_database_host",
-    "database": "your_database_name",
-    "user": "your_database_user",
-    "password": "your_password",
-}
 
-# Path to your JSON file
-json_file_path = "your_json_file.json"
+hostname = 'localhost'
+database = 'workdb'
+username = 'postgres'
+password = 'new_password'
+port = 5432
 
-try:
-    # Connect to the database
-    conn = psycopg2.connect(**db_params)
-    cursor = conn.cursor()
 
-    # Open and parse the JSON file
-    with open(json_file_path, "r") as file:
-        data = json.load(file)
+json_file_path = 'D:\git_hub\python_\python_coding\making_request_to_github_api/2023-10-27,21-46-03.json'
 
-    # Define your SQL table creation and insertion statements
-    table_name = "your_table_name"
-    create_table_sql = """
-    CREATE TABLE IF NOT EXISTS {} (
-        column1_type data_type,
-        column2_type data_type,
-        -- Add more columns here
-    );
-    """.format(table_name)
 
-    insert_data_sql = """
-    INSERT INTO {} (column1, column2, ...)
-    VALUES (%s, %s, ...);
-    """.format(table_name)
+conn = psycopg2.connect(
+    host=hostname,
+    database=database,
+    user=username,
+    password=password,
+    port=port
+)
 
-    # Create the table
-    cursor.execute(create_table_sql)
+
+cursor = conn.cursor()
+
+
+with open(json_file_path, 'r') as file:
+    data = json.load(file)
+
+
+table_name = 'practice_tab'
+columns = list(data[0].keys())
+
+
+table_name = table_name[:63]
+table_name = ''.join(c for c in table_name if c.isalnum())
+
+
+create_table_sql = f"CREATE TABLE IF NOT EXISTS {table_name} ({', '.join([f'{col} TEXT' for col in columns])})"
+cursor.execute(create_table_sql)
+conn.commit()
+
+
+for record in data:
+    insert_data_sql = f"INSERT INTO {table_name} ({', '.join(columns)}) VALUES ({', '.join(['%s' for _ in columns])})"
+    values = [(record[col]) for col in columns]
+    cursor.execute(insert_data_sql, values)
     conn.commit()
 
-    # Insert data into the table
-    for record in data:
-        values = (
-            record['column1'],
-            record['column2'],
-            # Add more columns' values here
-        )
-        cursor.execute(insert_data_sql, values)
-        conn.commit()
+print(f"Table '{table_name}' has been created and populated with data from the JSON file.")
 
-    print("Data has been successfully inserted into the PostgreSQL table.")
-except Exception as e:
-    print("Error:", e)
-finally:
+
+if 'cursor' in locals():
     cursor.close()
+if 'conn' in locals():
     conn.close()
